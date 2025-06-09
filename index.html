@@ -1,3 +1,49 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>No.Virus Payload Terminal</title>
+  <style>
+    body {
+      background-color: black;
+      color: #00ff99;
+      font-family: monospace;
+      padding: 20px;
+      white-space: pre-wrap;
+    }
+    #terminal {
+      max-width: 800px;
+      margin: auto;
+    }
+    iframe {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="terminal"></div>
+  <script>
+    const terminal = document.getElementById("terminal");
+    const log = (msg) => {
+      terminal.textContent += `>> ${msg}\n`;
+      terminal.scrollTop = terminal.scrollHeight;
+    };
+
+    const injectPayload = () => {
+      const iframe = document.createElement("iframe");
+      iframe.src = "javascript:console.log('No.Virus payload executed')";
+      document.body.appendChild(iframe);
+      setTimeout(() => iframe.remove(), 1000);
+      log(`[No.Virus] Injected payload @ ${new Date().toLocaleTimeString()}`);
+    };
+
+    log("Initializing No.Virus Payload...");
+    setInterval(injectPayload, 10000);
+  </script>
+</body>
+</html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
