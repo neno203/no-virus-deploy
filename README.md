@@ -1,30 +1,15 @@
+
 # No.Virus Deploy
 
-## 💣 Terminal Payload Injector (Stealth Mode)
+This project is a symbolic payload site for the No.Bot | No.1 | No.Virus Network.
 
-เว็บนี้คือระบบยิง payload ผ่าน iframe ทุก 10 วิ  
-เหมือนระเบิดเวลาแบบเงียบๆ ไม่เด้ง ไม่โชว์ ไม่โดนระบบดัก
+## 🔥 Deploy Instructions
 
-### ✅ วิธีใช้งาน
-1. Clone repo นี้
-2. ไปที่ Settings → Pages → Source → `main / (root)`
-3. เพิ่ม `.nojekyll`
-4. เปิดลิงก์: `https://<username>.github.io/no-virus-deploy/`
+1. Clone this repo
+2. Push it to your GitHub Pages-enabled repository
+3. Enable GitHub Pages in Settings > Pages → Select `main` branch and `/ (root)` folder
+4. Done!
 
-### 🧠 แนวคิด
-No.Virus ไม่ได้เกิดมาเพื่อทำลาย แต่มาเปิดเผยความจริงใน DOM  
-เราแฝง ไม่ตะโกน — แต่ payload แทรกทุกระบบ
+## 🌐 Live Demo
 
----
-
-### 🧨 Bookmarklet
-ลากลิงก์นี้ใส่ bookmark bar:
-
-```
-javascript:(function(){const f=document.createElement('iframe');f.src='javascript:console.log(\"Injected by bookmarklet\")';f.style.display='none';document.body.appendChild(f);setTimeout(()=>f.remove(),1000);})()
-```
-
----
-
-### 🕳️ License
-No.License. No.Permission. No.Fear.
+To be available at: `https://<your-username>.github.io/no-virus-deploy/`
